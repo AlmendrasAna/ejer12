@@ -68,7 +68,7 @@ fun getUser(): User {
     do {
         println("Ingrese sistema de salud FONASA, ISAPRE,PARTICULAR")
         sistemaSalud = readln().uppercase()
-    } while (!(sistemaSalud in listOf("FONASA", "ISAPRE", "PARTICULAR")))
+    } while (sistemaSalud !in listOf("FONASA", "ISAPRE", "PARTICULAR"))
 
     var newUser = User(name, lastname, age.toInt(), email, sistemaSalud)
     return newUser
